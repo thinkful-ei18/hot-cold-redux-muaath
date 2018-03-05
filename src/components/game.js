@@ -9,7 +9,6 @@ import InfoSection from './info-section';
 
 
 export function Game(props) {
-  console.log(props.feedback);
     return (
       <div>
         <Header

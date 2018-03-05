@@ -9,7 +9,9 @@ const  initialState = {
 export const hotColdReducer = (state=initialState, action) => {
     if(action.type === actions.RESTART_GAME){
         return Object.assign({}, state, {
-            correctAnswer: action.correctAnswer
+            correctAnswer: Math.floor(Math.random() * 100) + 1,
+            feedback: 'Make your guess!',
+            guesses:[]
         });
     }
     else if(action.type === actions.ADD_GUESS){
